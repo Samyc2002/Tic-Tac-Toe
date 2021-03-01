@@ -24,7 +24,7 @@ function Square(props) {
   
     render() {
       return (
-        <div>
+        <div className="board">
           <div className="board-row">
             {this.renderSquare(0)}
             {this.renderSquare(1)}
@@ -89,8 +89,8 @@ function Square(props) {
       const moves = history.map((step,move) => {
         const desc = move ? 'Go to move #' + move : "Go to Game Start";
         return (
-          <li key={move}>
-            <button onClick={() => this.jumpTo(move)}>{desc}</button>
+          <li className="list-item" key={move}>
+            <button className="bt" onClick={() => this.jumpTo(move)}>{desc}</button>
           </li>
         )
       });
@@ -112,7 +112,7 @@ function Square(props) {
           </div>
           <div className="game-info">
             <div>{status}</div>
-            <ol>{moves}</ol>
+            <ol className="buttons">{moves}</ol>
           </div>
         </div>
       );
