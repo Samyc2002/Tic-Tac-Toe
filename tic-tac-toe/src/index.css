@@ -3,6 +3,7 @@ body {
     font-weight: 500;
     font-size: 20px;
     margin: 40px;
+    background: linear-gradient(90deg, #00ffb3, #89fff3);
   }
 
   nav {
@@ -14,7 +15,7 @@ body {
   }
 
   .list-item {
-    margin: 3px;
+    margin: 15px;
   }
 
   .game {
@@ -26,19 +27,29 @@ body {
   }
 
   .bt {
-    background-color: #03dac5;
+    background: rgba(255, 255, 255, 0.1);
     opacity: 1;
     border: 0px;
     border-radius: 15px;
     padding: 2px;
     width: 130px;
     height: 25px;
-    color: #6200ee;
+    color: #121212;
     font-weight: 600;
   }
 
+  .bt:hover {
+    box-shadow: 3px 3px 5px #121212;
+    background: #ffffff;
+    color: #6200ee;
+  }
+
+  .buttons {
+    padding-left: 20px;
+  }
+
   .board {
-    background-color: #03dac5;
+    background-color: #ffffff;
     border-radius: 8px;
     padding-left: 10px;
     padding-right: 10px;
@@ -58,12 +69,12 @@ body {
   }
   
   .square {
-    background: #03dac5;
+    background: #ffffff;
     border: 2px solid #6200ee;
     border-radius: 5px;
     float: left;
-    font-size: 24px;
-    font-weight: 500;
+    font-size: 32px;
+    font-weight: 600;
     line-height: 34px;
     height: 100px;
     margin-right: 2px;
@@ -88,6 +99,6 @@ body {
   }
   
   .game-info {
-    margin-left: 20px;
+    margin-left: 40px;
   }
   
