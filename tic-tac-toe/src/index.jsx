@@ -25,6 +25,11 @@ function Square(props) {
     render() {
       return (
         <div className="board">
+          <div className="row-count">
+            <div className="row-label">3</div>
+            <div className="row-label">2</div>
+            <div className="row-label">1</div>
+          </div>
           <div className="board-row">
             {this.renderSquare(0)}
             {this.renderSquare(1)}
@@ -39,6 +44,11 @@ function Square(props) {
             {this.renderSquare(6)}
             {this.renderSquare(7)}
             {this.renderSquare(8)}
+          </div>
+          <div className="column-count">
+            <div className="column-label">a</div>
+            <div className="column-label">b</div>
+            <div className="column-label">c</div>
           </div>
         </div>
       );
@@ -85,7 +95,6 @@ function Square(props) {
       const history = this.state.history;
       const current = history[this.state.stepNumber];
       const winner = calculateWinner(current.squares);
-
       const moves = history.map((step,move) => {
         const desc = move ? 'Go to move #' + move : "Go to Game Start";
         return (
